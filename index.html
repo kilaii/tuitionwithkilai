@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abel Kilai - Your Math & Chemistry Tutor</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #e0f7fa, #80deea);
+      color: #333;
+      overflow-x: hidden;
+    }
+    /* Header with Logo */
+    header {
+      background: linear-gradient(90deg, #006064, #00838f);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 5px solid #004d40;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 0.5rem;
+      /* Adding a subtle drop shadow to the logo */
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3));
+    }
+    .logo h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    .header-text {
+      text-align: right;
+    }
+    .header-text p {
+      font-size: 1rem;
+      margin-top: 0.2rem;
+    }
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #004d40;
+      padding: 1rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      color: #b2dfdb;
+      transform: scale(1.05);
+    }
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Sections */
+    section {
+      margin-bottom: 2rem;
+    }
+    section h2 {
+      color: #006064;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #006064;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .services ul, .rates ul {
+      list-style-type: none;
+      margin: 1rem 0;
+    }
+    .services li, .rates li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .services li:before, .rates li:before {
+      content: '✔';
+      color: #00838f;
+      position: absolute;
+      left: 0;
+    }
+    /* Buttons */
+    .btn, .whatsapp-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn {
+      background: #00838f;
+      color: #fff;
+    }
+    .btn:hover {
+      background: #006064;
+      transform: translateY(-2px);
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: #fff;
+      margin-top: 1rem;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+    /* Special Offer */
+    .special-offer {
+      background: #ffeb3b;
+      color: #333;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .special-offer span {
+      font-weight: bold;
+      color: #d32f2f;
+    }
+    /* Rates Section */
+    .rates h2 {
+      color: #006064;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .rates p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .rates ul {
+      font-size: 1.3rem;
+    }
+    .rates .highlight {
+      color: #e91e63;
+      font-weight: bold;
+    }
+    .rates .cta {
+      font-size: 1.5rem;
+      color: #006064;
+      margin-top: 1rem;
+    }
+    /* Contact Section */
+    #contact a {
+      color: #00838f;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.3s;
+    }
+    #contact a:hover {
+      border-bottom: 1px solid #00838f;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #004d40;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo h1 {
+        font-size: 1.8rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Placeholder math-themed logo: Replace with your custom logo if available -->
+      <img src="https://via.placeholder.com/50?text=∑" alt="Math Logo">
+      <h1>Abel Kilai</h1>
+    </div>
+    <div class="header-text">
+      <p><B>Your Math & Chemistry Tutor</B></p>
+    </div>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#rates">Rates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm Abel Kilai, a dedicated tutor offering personalized tuition in Mathematics and Chemistry for Form 2 to Form 4 students. I strive to make learning engaging and effective, ensuring you gain a solid understanding of key concepts. My goal is to help you excel academically and build confidence in these subjects.</p>
+    </section>
+    <section id="services">
+      <h2>My Services</h2>
+      <ul>
+        <li>Personalized Math lessons that simplify complex topics</li>
+        <li>Engaging Chemistry tuition with practical examples</li>
+        <li>Flexible scheduling to suit your needs</li>
+        <li>One-on-one and small group sessions available</li>
+      </ul>
+      <a class="btn" href="#contact">Book a Session</a>
+    </section>
+    <section id="rates" class="rates">
+      <h2>Rates</h2>
+      <p>I offer highly competitive rates for high-quality tuition. As I am starting out, my rates are affordable, but expect a level of service that guarantees results!</p>
+      <ul>
+        <li>Math Tuition: <span class="highlight">KES 150 per hour</span></li>
+        <li>Chemistry Tuition: <span class="highlight">KES 100 per hour</span></li>
+      </ul>
+      <p>Whether you're looking for individual or group lessons, my goal is to ensure your success. Don’t miss out on these affordable rates as I build my tutoring business!</p>
+      <p class="cta">Ready to boost your grades? Contact me now to schedule your first session!</p>
+      <div class="special-offer">
+        <p><span>Special Offer:</span> The first lesson is <strong>FREE</strong> for the first 5 students! Hurry and grab your spot before they're gone!</p>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>If you're interested in booking a session or have any questions, please get in touch:</p>
+      <p><strong>Email:</strong> <a href="mailto:kilaiabel07@gmail.com">kilaiabel07@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:0745798700">0745798700</a></p>
+      <p>Feel free to reach out via WhatsApp as well!</p>
+      <a class="whatsapp-btn" href="https://wa.me/254745798700" target="_blank">Chat on WhatsApp</a>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Abel Kilai - Your Tutor. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
